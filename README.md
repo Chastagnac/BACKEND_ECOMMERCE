@@ -1,5 +1,5 @@
 # BACKEND_ECOMMERCE
---------------------------------------------------------------------------------
+
 Installation de PiP
 
 Sous Linux : apt-get install python-pip          puis pip -V pour verifier.
@@ -16,14 +16,14 @@ Maintenant on va créer l'environnement virtuel qu'il faudra relancer à chaque 
 (A mon sens il est facultatif sur une machine qui n'a pas besoin d'autres versions des paquets, la preuve je ne m'en sers pas sous mac et je fais tourner le projet)
 
 ----------------------------------------------
-CREATE Virtual Evironnement
+CREATE Virtual Evironnement :
 
 virtualenv virtualenv_name
 virtualenv -p /usr/bin/python3 virtualenv_name (avec version de python spécifique)
 --------------------------------------------- 
 
 ------------------------------- 
-Activate Venv
+Activate Venv :
 source virtualenv_name/bin/activate
 ----------------------------------------------------- 
 deactivate (pour desactiver)
@@ -34,8 +34,8 @@ Si tout se passse bien tu peux alors acceder au backend base article sur un navi
 
 #FRONTEND_ECOMMERCE
 
-Npm install axios
-Npm install bulma
+npm install axios
+npm install bulma
 
 Lancement sur serveur frontend : il faut faire un cd au préalable dans le dossier front end et lancer :
 npm run serve
