@@ -1,5 +1,7 @@
 # BACKEND_ECOMMERCE
---------------------------------Installation de PiP-----------------------------
+--------------------------------------------------------------------------------
+Installation de PiP
+
 Sous Linux : apt-get install python-pip          puis pip -V pour verifier.
 Sous windows (Necessite python :https://www.python.org/ftp/python/3.10.1/python-3.10.1-amd64.exe) puis Telecharge https://bootstrap.pypa.io/get-pip.py ça et lance la commande : python get-pip.py                     puis pip -V pour verifier.
 Sous mac : brew install python-pip (ou python ou pip)
@@ -13,14 +15,17 @@ dans un terminal : pip install virtualenv Django Django-rest-framework Django-co
 Maintenant on va créer l'environnement virtuel qu'il faudra relancer à chaque fois que l'on ferme le terminal(d'où un script au demarrage du serveur)
 (A mon sens il est facultatif sur une machine qui n'a pas besoin d'autres versions des paquets, la preuve je ne m'en sers pas sous mac et je fais tourner le projet)
 
-----------------CREATE VENV---------------- 
+----------------------------------------------
+CREATE Virtual Evironnement
+
 virtualenv virtualenv_name
 virtualenv -p /usr/bin/python3 virtualenv_name (avec version de python spécifique)
 --------------------------------------------- 
 
-----------------activate VENV ---------------- 
+------------------------------- 
+Activate Venv
 source virtualenv_name/bin/activate
------------------------------------------------ 
+----------------------------------------------------- 
 deactivate (pour desactiver)
 
 Pour lancer le serveur backend Django : il faut faire un cd dans le dossier backend (là ou il y un fichier manage.py) et faire : python3 manage.py runserver
