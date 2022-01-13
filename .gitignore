@@ -1,0 +1,10 @@
+.idea
+*.pyc
+/media
+/static
+/htmlcov
+staticfiles/
+
+*local_bl.py
+
+
