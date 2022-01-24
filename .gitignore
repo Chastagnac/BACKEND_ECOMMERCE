@@ -1,6 +1,5 @@
 .idea
 *.pyc
-/media
 /static
 /htmlcov
 staticfiles/
