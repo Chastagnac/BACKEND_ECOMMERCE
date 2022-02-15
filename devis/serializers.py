@@ -8,7 +8,6 @@ class DevisSerializer(serializers.ModelSerializer):
         model = Devi 
         fields = (
             "id",
-            "status",
             "name", 
             "email",
             "siret",
