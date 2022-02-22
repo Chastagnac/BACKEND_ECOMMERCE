@@ -11,4 +11,5 @@ urlpatterns = [
     path('api/v1/', include('djoser.urls.authtoken')),
     path('api/v1/', include('product.urls')),  # return on urls'products
     path('api/v1/', include('devis.urls')),  # return on urls'products
+    path('api/password_reset/', include('django_rest_passwordreset.urls', namespace='password_reset')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
