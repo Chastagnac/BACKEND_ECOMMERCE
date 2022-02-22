@@ -23,3 +23,10 @@ class LatestQuoteList(APIView):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class LatestQuoteId(APIView):
+    def get(self, request, id, format=None):
+        devis = Devi.objects.filter(id=id)
+        serializer = DevisSerializer(devis, many=True)
+        return Response(serializer.data)

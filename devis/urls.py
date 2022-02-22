@@ -6,4 +6,5 @@ from devis import views
 
 urlpatterns = [
     path('latest-quote/', views.LatestQuoteList.as_view()),
+    path('latest-quote/<id>/', views.LatestQuoteId.as_view()),
 ]

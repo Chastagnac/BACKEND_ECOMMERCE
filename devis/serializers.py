@@ -15,4 +15,5 @@ class DevisSerializer(serializers.ModelSerializer):
             "object",
             "category",
             "content",
+            "status"
         ) 
