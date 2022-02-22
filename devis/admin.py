@@ -1,6 +1,5 @@
 from django.contrib import admin
 
-from .models import Statu, Devi
+from .models import Devi
 
-admin.site.register(Statu)
 admin.site.register(Devi)

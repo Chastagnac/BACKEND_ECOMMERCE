@@ -8,7 +8,6 @@ class DevisSerializer(serializers.ModelSerializer):
         model = Devi 
         fields = (
             "id",
-            "status",
             "name", 
             "email",
             "siret",
@@ -16,4 +15,5 @@ class DevisSerializer(serializers.ModelSerializer):
             "object",
             "category",
             "content",
+            "status"
         ) 
