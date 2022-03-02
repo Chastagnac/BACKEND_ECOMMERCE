@@ -17,3 +17,8 @@ class DevisSerializer(serializers.ModelSerializer):
             "content",
             "status"
         ) 
+
+class DevisSet(serializers.ModelSerializer):
+    class Meta: 
+        model = Devi 
+        fields = ('status',) 
