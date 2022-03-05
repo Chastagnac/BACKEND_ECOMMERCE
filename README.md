@@ -10,7 +10,7 @@ Sous mac : brew install python-pip (ou python ou pip)
 Virtualenv , il permet de se creer un terminal virtuel ne disposant uniquement des versions des dependances qui sont utiles au projet, pratique quand on a besoin de version depréciées, celà permet de ne pas toucher à sa version de python installée par exemple sur sa propre machine si nous avons besoin d'une version ulterieure.
 (au taff je peux pas utiliser npm donc pas de front pour moi sur mon temps de travail) 
 
-dans un terminal : pip install virtualenv Django Django-rest-framework Django-cors-headers djoser pillow stripe npm
+dans un terminal : pip install virtualenv Django Django-rest-framework Django-cors-headers djoser pillow stripe npm django_rest_passwordreset
 
 Maintenant on va créer l'environnement virtuel qu'il faudra relancer à chaque fois que l'on ferme le terminal(d'où un script au demarrage du serveur)
 (A mon sens il est facultatif sur une machine qui n'a pas besoin d'autres versions des paquets, la preuve je ne m'en sers pas sous mac et je fais tourner le projet)
