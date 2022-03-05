@@ -8,7 +8,7 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 
 from .models import Devi
-from .serializers import DevisSerializer
+from .serializers import DevisSerializer, DevisSet
 
 
 class LatestQuoteList(APIView):
@@ -30,3 +30,13 @@ class LatestQuoteId(APIView):
         devis = Devi.objects.filter(id=id)
         serializer = DevisSerializer(devis, many=True)
         return Response(serializer.data)
+
+    def post(self, request, id, *args, **kwargs):
+        devis = Devi.objects.filter(id=id).first()
+        serializer = DevisSet(devis,data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
