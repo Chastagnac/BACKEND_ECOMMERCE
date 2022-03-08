@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+STRIPE_SECRET_KEY = "sk_test_51KZxsnKZ4kNJDQ8mzjhfb1ZSBF46TG7GfWlAusPIX35Tl4kwtVM7iCVlQcw4adb2bIVDkpBYJOQjOzMrQf7v5dsc00u2bYKbge"
 
 # Application definition
 
@@ -46,6 +47,7 @@ INSTALLED_APPS = [
 
     'devis',
     'product',
+    'order',
 ]
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
