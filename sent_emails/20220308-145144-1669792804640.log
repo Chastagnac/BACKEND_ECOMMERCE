@@ -1,0 +1,42 @@
+Content-Type: multipart/alternative;
+ boundary="===============3329625318443180950=="
+MIME-Version: 1.0
+Subject: 
+ =?utf-8?q?R=C3=A9initialisation_du_mot_de_passe_sur_127=2E0=2E0=2E1=3A8000?=
+From: webmaster@localhost
+To: rida-des-lrs@outlook.fr
+Date: Tue, 08 Mar 2022 13:51:44 -0000
+Message-ID: 
+ <164674750428.5088.1782072442590914601@PC-21501040-ID.novea.cg13.fr>
+
+--===============3329625318443180950==
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+
+Vous recevez ce message en réponse à votre demande de réinitialisation du mot de passe de votre compte sur 127.0.0.1:8000.
+
+Veuillez vous rendre sur cette page et choisir un nouveau mot de passe :
+http://127.0.0.1:8000/#/password/reset/confirm/MjY/b1z2m8-13d7140525d89ade5995aee3d26faeb6
+Votre nom d'utilisateur, au cas où vous l'auriez oublié, est le suivant : rida
+
+Merci d’utiliser notre site !
+
+L’équipe 127.0.0.1:8000
+--===============3329625318443180950==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+
+<p>Vous recevez ce message en réponse à votre demande de réinitialisation du mot de passe de votre compte sur 127.0.0.1:8000.</p>
+
+<p>Veuillez vous rendre sur cette page et choisir un nouveau mot de passe :</p>
+<a href="http://127.0.0.1:8000/#/password/reset/confirm/MjY/b1z2m8-13d7140525d89ade5995aee3d26faeb6">http://127.0.0.1:8000/#/password/reset/confirm/MjY/b1z2m8-13d7140525d89ade5995aee3d26faeb6</a>
+<p>Votre nom d'utilisateur, au cas où vous l'auriez oublié, est le suivant : <b>rida</b></p>
+
+<p>Merci d’utiliser notre site !</p>
+
+<p>L’équipe 127.0.0.1:8000</p>
+--===============3329625318443180950==--
+
+-------------------------------------------------------------------------------
