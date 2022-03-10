@@ -21,6 +21,18 @@ class ProductSerializer(serializers.ModelSerializer):
             "proteins",
         ) 
 
+class ProductSerializerAdd(serializers.ModelSerializer):
+    class Meta: 
+        model = Product 
+        fields = (
+            "id",
+            "category",
+            "name", 
+            "description",
+            "price",
+        ) 
+
+
 class CategorySerializer(serializers.ModelSerializer):
     products = ProductSerializer(many=True)
     class Meta:
