@@ -45,8 +45,6 @@ INSTALLED_APPS = [
     'corsheaders',
     'djoser',
 
-    'djstripe',
-
     'devis',
     'product',
     'order',
