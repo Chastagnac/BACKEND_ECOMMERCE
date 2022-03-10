@@ -25,8 +25,9 @@ SECRET_KEY = 'django-insecure-ry0c)8v1fln3p!y)a$^%i3!68n^63vm)$@0(mya@dw8t57u3ao
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
+STRIPE_SECRET_KEY = "sk_test_51KZxsnKZ4kNJDQ8mzjhfb1ZSBF46TG7GfWlAusPIX35Tl4kwtVM7iCVlQcw4adb2bIVDkpBYJOQjOzMrQf7v5dsc00u2bYKbge"
 
 # Application definition
 
@@ -38,16 +39,22 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'django_rest_passwordreset',
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
     'djoser',
 
-    'product'
+    'devis',
+    'product',
+    'order',
 ]
+
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",
+    "http://127.0.0.1:8080",
+    "http://eco-services-g4.fr.nf",
 ]
 
 MIDDLEWARE = [
@@ -60,6 +67,17 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+DOMAIN = '127.0.0.1:8080'
+SITE_NAME = 'EcoService'
+
+DJOSER = {
+    'PASSWORD_RESET_CONFIRM_URL': 'password-reset?uid={uid}&token={token}',
+    'USERNAME_RESET_CONFIRM_URL': 'api/v1/users/reset_password_confirm/{uid}/{token}',
+    'ACTIVATION_URL': 'activate?uid={uid}&token={token}',
+    'SEND_ACTIVATION_EMAIL': True,
+    'SERIALIZERS': {},
+}
 
 ROOT_URLCONF = 'ecommerce.urls'
 
@@ -147,3 +165,18 @@ MEDIA_ROOT = BASE_DIR / 'media/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#Stripe
+STRIPE_PUBLIC_KEY = "pk_test_51KZxsnKZ4kNJDQ8mtS34sp1hcsxDol8SDlmhyJMjESS5zEzWsswEV92csfXM2LPhC4TZMlpZR8tBTeVoBttC9b8U00CZm5h04I"
+STRIPE_SECRET_KEY = "sk_test_51KZxsnKZ4kNJDQ8mzjhfb1ZSBF46TG7GfWlAusPIX35Tl4kwtVM7iCVlQcw4adb2bIVDkpBYJOQjOzMrQf7v5dsc00u2bYKbge"
+STRIPE_TEST_SECRET_KEY="sk_test_51KZxsnKZ4kNJDQ8mzjhfb1ZSBF46TG7GfWlAusPIX35Tl4kwtVM7iCVlQcw4adb2bIVDkpBYJOQjOzMrQf7v5dsc00u2bYKbge"
+DJSTRIPE_WEBHOOK_VALIDATION='retrieve_event'
+
+DJSTRIPE_FOREIGN_KEY_TO_FIELD="djstripe_id"
+
+#email
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'g4.ecoservice@gmail.com'
+EMAIL_HOST_PASSWORD = 'Azerty123456789*'
