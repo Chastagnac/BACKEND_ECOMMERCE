@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+STRIPE_SECRET_KEY = "sk_test_51KZxsnKZ4kNJDQ8mzjhfb1ZSBF46TG7GfWlAusPIX35Tl4kwtVM7iCVlQcw4adb2bIVDkpBYJOQjOzMrQf7v5dsc00u2bYKbge"
 
 # Application definition
 
@@ -46,13 +47,14 @@ INSTALLED_APPS = [
 
     'devis',
     'product',
+    'order',
 ]
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",
     "http://127.0.0.1:8080",
+    "http://eco-services-g4.fr.nf",
 ]
 
 MIDDLEWARE = [
@@ -65,6 +67,17 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+DOMAIN = '127.0.0.1:8080'
+SITE_NAME = 'EcoService'
+
+DJOSER = {
+    'PASSWORD_RESET_CONFIRM_URL': 'password-reset?uid={uid}&token={token}',
+    'USERNAME_RESET_CONFIRM_URL': 'api/v1/users/reset_password_confirm/{uid}/{token}',
+    'ACTIVATION_URL': 'activate?uid={uid}&token={token}',
+    'SEND_ACTIVATION_EMAIL': True,
+    'SERIALIZERS': {},
+}
 
 ROOT_URLCONF = 'ecommerce.urls'
 
@@ -153,11 +166,17 @@ MEDIA_ROOT = BASE_DIR / 'media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+#Stripe
+STRIPE_PUBLIC_KEY = "pk_test_51KZxsnKZ4kNJDQ8mtS34sp1hcsxDol8SDlmhyJMjESS5zEzWsswEV92csfXM2LPhC4TZMlpZR8tBTeVoBttC9b8U00CZm5h04I"
+STRIPE_SECRET_KEY = "sk_test_51KZxsnKZ4kNJDQ8mzjhfb1ZSBF46TG7GfWlAusPIX35Tl4kwtVM7iCVlQcw4adb2bIVDkpBYJOQjOzMrQf7v5dsc00u2bYKbge"
+STRIPE_TEST_SECRET_KEY="sk_test_51KZxsnKZ4kNJDQ8mzjhfb1ZSBF46TG7GfWlAusPIX35Tl4kwtVM7iCVlQcw4adb2bIVDkpBYJOQjOzMrQf7v5dsc00u2bYKbge"
+DJSTRIPE_WEBHOOK_VALIDATION='retrieve_event'
 
-# Email
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp-madb.alwaysdata.net'
-EMAIT_PORT = 587
+DJSTRIPE_FOREIGN_KEY_TO_FIELD="djstripe_id"
+
+#email
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'no-reply@gemsdoc-g4.fr.nf'
-EMAIL_HOST_PASSWORD = 'nvmr1234'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'g4.ecoservice@gmail.com'
+EMAIL_HOST_PASSWORD = 'Azerty123456789*'
