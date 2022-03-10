@@ -17,7 +17,7 @@ class Devi(models.Model):
     content = models.TextField(max_length=500)
     status = models.IntegerField(default=0)
     class Meta:
-        ordering = ('-name',)
+        ordering = ('-id',)
 
     def __str__(self):
         return self.name
