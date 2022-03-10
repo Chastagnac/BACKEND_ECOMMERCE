@@ -74,7 +74,7 @@ SITE_NAME = 'EcoService'
 DJOSER = {
     'PASSWORD_RESET_CONFIRM_URL': 'password-reset?uid={uid}&token={token}',
     'USERNAME_RESET_CONFIRM_URL': 'api/v1/users/reset_password_confirm/{uid}/{token}',
-    'ACTIVATION_URL': 'api/v1/activate/{uid}/{token}',
+    'ACTIVATION_URL': 'activate?uid={uid}&token={token}',
     'SEND_ACTIVATION_EMAIL': True,
     'SERIALIZERS': {},
 }
