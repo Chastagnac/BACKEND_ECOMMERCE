@@ -52,9 +52,7 @@ INSTALLED_APPS = [
 
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8080",
-    "http://127.0.0.1:8080",
-    "http://eco-services-g4.fr.nf",
+    "http://217.160.9.230/%22,%22http://ecoservice-g4.fr%22,%22http://5.196.28.188"
 ]
 
 MIDDLEWARE = [
