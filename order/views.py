@@ -14,8 +14,6 @@ from .models import Order, OrderItem
 from .serializers import OrderSerializer, MyOrderSerializer
 
 @api_view(['POST'])
-@authentication_classes([authentication.TokenAuthentication])
-@permission_classes([permissions.IsAuthenticated])
 def checkout(request):
     serializer = OrderSerializer(data=request.data)
 
@@ -27,7 +25,7 @@ def checkout(request):
             charge = stripe.Charge.create(
                 amount=int(paid_amount * 100),
                 currency='EUR',
-                description='Charges d\'Eco Service',
+                description='Charges d Eco Service',
                 source=serializer.validated_data['stripe_token']
             )
 
@@ -40,10 +38,7 @@ def checkout(request):
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class OrdersList(APIView):
-    authentication_classes = [authentication.TokenAuthentication]
-    permission_classes = [permissions.IsAuthenticated]
-
     def get(self, request, format=None):
-        orders = Order.objects.filter(user=request.user)
+        orders = Order.objects.filter()
         serializer = MyOrderSerializer(orders, many=True)
         return Response(serializer.data) 
