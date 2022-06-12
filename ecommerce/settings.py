@@ -97,7 +97,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'c0d0_ecommerce',
         'USER': 'c0d0',
-        'PASSWORD': '29b8ff5d8d5',
+        'PASSWORD': 'g41234bdd',
         'HOST': 'mysql-c0d0.alwaysdata.net',
         'PORT': '3306',
     }
